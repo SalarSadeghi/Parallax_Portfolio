@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.salute {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.saluteImgContainer {
+  flex: 1;
+}
+.saluteTextContainer {
+  flex: 3;
+}
+
+.saluteText {
+  color: #333;
+  font-size: 60vw;
+  cursor: default;
+}
+
+.saluteImg {
+  width: 100%;
+}
+
+.nameContainer {
+  background-color: rebeccapurple;
+  height: 100vh;
+}
+.name {
+  font-size: 20vw;
+  text-align: center;
+  line-height: 100vh;
+  cursor: default;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.dark {
+  background: url(./images/bg1.png);
+}
+
+.purple {
+  background: rebeccapurple url(./images/bg2.png);
+}
+
+.jobTitle {
+  font-size: 10vw;
+  color: #444;
+  line-height: 100vh;
+  cursor: default;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.projectsTitle {
+  font-size: 10vw;
+  color: #333;
+  cursor: default;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  gap: 100px;
+  justify-content: center;
+}
+
+.phone {
+  width: 300px;
+  height: 600px;
+  position: relative;
+}
+
+.phoneScreen {
+  width: 264px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  border-radius: 25px;
+  overflow: scroll;
+}
+.phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+.phoneApp {
+  width: 100%;
+}
+.projectDetail {
+  display: flex;
+  flex-direction: column;
+  color: #555;
+  gap: 50px;
+  align-items: center;
+}
+
+.projectTitle {
+  font-size: 7vw;
+}
+
+.projectDesc {
+  font-size: 20px;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.projectBtn {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #666;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectBtn::after {
+  content: "View Demo";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  border-radius: 5px;
+  transition: all 1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #222;
+  color: white;
+}
+
+.projectBtn:hover.projectBtn::after {
+  transform: translateX(100%);
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  position: relative;
+}
+
+.laptopScreen {
+  position: absolute;
+  width: 451px;
+  height: 283px;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+
+.laptopApp {
+  width: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.project:nth-child(2n){
+    flex-direction: row-reverse;
+}
+
+.githubContainer{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.githubTitle{
+  font-size: 100px;
+  color: #555;
+}
+
+.githubChart{
+  width: 820px;
+}
+
+.dates{
+  padding: 10px;
+  color: #666;
+  font-size: 12px;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
+  background-color: #171c25;
+  transition: all 2s ease-in-out;
+}
+
+.active:nth-child(4n) {
+  background-color: lightpink;
+}
+
+.boxContainer:hover .active{
+  background-color: #fdbe00;
+}
+
+.dates {
+  display: flex;
+  justify-content: space-between;
+}
+
+.githubTitle{
+  text-align: center;
+}
+
+.githubSm{
+  display: none;
+}
+@media only screen and (max-width:1024px){
+  .project{
+    flex-direction: column;
+    height: max-content;
+  }
+  .project:nth-child(2n){
+    flex-direction: column;
+  }
+  .phone , .laptop {
+    transform: none !important;
+  }
+
+  .projects{
+    padding: 0 30px;
+    text-align: center;
+    
+  }
+
+  .githubChart{
+    display: none;
+  }
+
+  .githubTitle{
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .githubSm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #666;
+  }
+}
